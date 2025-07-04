@@ -1,137 +1,149 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Layout, Menu, Typography } from 'antd';
 import {
-  DashboardOutlined, ShoppingCartOutlined, AppstoreOutlined,
-  UserOutlined, TeamOutlined, CreditCardOutlined, BarChartOutlined, SettingOutlined
+    DashboardOutlined,
+    FileDoneOutlined,
+    AppstoreOutlined,
+    ShopOutlined,
+    TeamOutlined,
+    BarChartOutlined,
+    SettingOutlined,
+    PlusCircleOutlined,
+    UnorderedListOutlined,
+    BoxPlotOutlined,
+    GiftOutlined,
+    UserOutlined,
+    SolutionOutlined,
+    LineChartOutlined,
+    PieChartOutlined,
+    DollarCircleOutlined,
+    SlidersOutlined,
+    AppstoreAddOutlined,
+    PartitionOutlined,
+    // --- BƯỚC 1: IMPORT ICON MỚI ---
+    SmileOutlined,
 } from '@ant-design/icons';
-import './App.css';
 
-// Import tất cả các trang
+// Import các trang của bạn (giữ nguyên như cũ)
 import DashboardPage from './DashboardPage';
-import ProductPage from './ProductPage';
-import CustomerPage from './CustomerPage';
-import InvoiceListPage from './InvoiceListPage';
 import CreateInvoicePage from './CreateInvoicePage';
-import StaffPage from './StaffPage';
+import InvoiceListPage from './InvoiceListPage';
+import ProductPage from './ProductPage';
 import ServicePackagePage from './ServicePackagePage';
+import StaffPage from './StaffPage';
+import CustomerPage from './CustomerPage';
 import RevenueReportPage from './RevenueReportPage';
-import SalaryReportPage from './SalaryReportPage';
 import CommissionReportPage from './CommissionReportPage';
-import CategorySettingsPage from './CategorySettingsPage';
+import SalaryReportPage from './SalaryReportPage';
 import CommissionSettingsPage from './CommissionSettingsPage';
+import CategorySettingsPage from './CategorySettingsPage';
 import AdjustmentsPage from './AdjustmentsPage';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider, Footer } = Layout;
+const { Title } = Typography;
 
-// Component Menu với cấu trúc đã được sửa lại
-const AppMenu = () => {
-  const location = useLocation();
-  
-  const getSelectedKeys = () => {
-    const path = location.pathname;
-    if (path.startsWith('/products') || path.startsWith('/services')) return ['hang-hoa-group'];
-    if (path.startsWith('/customers') || path.startsWith('/service-packages')) return ['doi-tac-group'];
-    if (path.startsWith('/invoices')) return ['giao-dich'];
-    if (path.startsWith('/staff')) return ['nhan-vien'];
-    if (path.startsWith('/reports')) return ['bao-cao'];
-    if (path.startsWith('/settings')) return ['cai-dat'];
-    return ['tong-quan'];
-  };
-
-  const menuItems = [
-    { key: 'tong-quan', icon: <DashboardOutlined />, label: <Link to="/">Tổng quan</Link> },
-    { key: 'giao-dich', icon: <ShoppingCartOutlined />, label: <Link to="/invoices">Bán hàng</Link> },
-    { 
-      key: 'hang-hoa-group', 
-      icon: <AppstoreOutlined />, 
-      label: 'Hàng hóa',
-      children: [
-        { key: 'hang-hoa-sp', label: <Link to="/products">Sản phẩm</Link> },
-        { key: 'hang-hoa-dv', label: <Link to="/services">Dịch vụ</Link> },
-      ]
-    },
-    { 
-      key: 'doi-tac-group', 
-      icon: <UserOutlined />, 
-      label: 'Đối tác',
-      children: [
-        { key: 'doi-tac-kh', label: <Link to="/customers">Khách hàng</Link> },
-        { key: 'doi-tac-goi-dv', label: <Link to="/service-packages">Gói dịch vụ</Link> },
-      ]
-    },
-    { 
-      key: 'nhan-vien', 
-      icon: <TeamOutlined />, 
-      label: 'Nhân viên',
-      children: [
-        { key: 'staff-list', label: <Link to="/staff">Danh sách nhân viên</Link> },
-        { key: 'staff-adjustments', label: <Link to="/staff/adjustments">Thưởng/Phạt</Link> }
-      ]
-    },
-    { 
-      key: 'bao-cao', 
-      icon: <BarChartOutlined />, 
-      label: 'Báo cáo',
-      children: [
-        { key: 'report-revenue', label: <Link to="/reports/revenue">Báo cáo thu chi</Link> },
-        { key: 'report-salary', label: <Link to="/reports/salary">Báo cáo lương</Link> },
-        { key: 'report-commission', label: <Link to="/reports/commissions">Báo cáo hoa hồng</Link> },
-      ]
-    },
-    // Chỉ có một mục Cài đặt duy nhất chứa các menu con
-    { 
-      key: 'cai-dat', 
-      icon: <SettingOutlined />, 
-      label: 'Cài đặt',
-      children: [
-        { key: 'setting-categories', label: <Link to="/settings/categories">Danh mục</Link> },
-        { key: 'setting-commission', label: <Link to="/settings/commissions">Hoa hồng</Link> }
-      ]
-    },
-  ];
-
-  return <Menu theme="dark" mode="inline" defaultSelectedKeys={getSelectedKeys()} defaultOpenKeys={getSelectedKeys()} items={menuItems} />;
-};
-
-function App() {
-  const [collapsed, setCollapsed] = useState(false);
-  return (
-    <BrowserRouter>
-      <Layout style={{ minHeight: '100vh' }}>
-        <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-          <div className="logo" />
-          <AppMenu />
-        </Sider>
-        <Layout className="site-layout">
-          <Header style={{ padding: '0 16px', background: '#fff' }}>
-            <span style={{float: 'right'}}>Xin chào, Thu ngân!</span>
-          </Header>
-          <Content style={{ margin: '16px' }}>
-            <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-              <Routes>
-                <Route path="/" element={<DashboardPage />} />
-                <Route path="/products" element={<ProductPage type="product" title="Quản lý Hàng hóa" />} />
-                <Route path="/services" element={<ProductPage type="service" title="Quản lý Dịch vụ" />} />
-                <Route path="/customers" element={<CustomerPage />} />
-                <Route path="/staff" element={<StaffPage />} />
-                <Route path="/invoices" element={<CreateInvoicePage />} />
-                <Route path="/invoices/list" element={<InvoiceListPage />} />
-                <Route path="/service-packages" element={<ServicePackagePage />} />
-                <Route path="/reports/revenue" element={<RevenueReportPage />} />
-                <Route path="/reports/salary" element={<SalaryReportPage />} />
-                <Route path="/reports/commissions" element={<CommissionReportPage />} />
-                <Route path="/settings/categories" element={<CategorySettingsPage />} />
-                <Route path="/settings/commissions" element={<CommissionSettingsPage />} />
-                <Route path="/staff/adjustments" element={<AdjustmentsPage />} />
-              </Routes>
-            </div>
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>My Salon ©{new Date().getFullYear()}</Footer>
-        </Layout>
-      </Layout>
-    </BrowserRouter>
-  );
+function getItem(label, key, icon, children) {
+    return {
+        key,
+        icon,
+        children,
+        label,
+    };
 }
 
-export default App;
+const menuItems = [
+    // ... (Giữ nguyên cấu trúc menuItems như cũ)
+    getItem(<Link to="/">Tổng quan</Link>, '/', <DashboardOutlined />),
+    getItem('Hóa đơn', 'invoices', <FileDoneOutlined />, [
+        getItem(<Link to="/invoices/create">Tạo hóa đơn</Link>, '/invoices/create', <PlusCircleOutlined />),
+        getItem(<Link to="/invoices/list">DS hóa đơn</Link>, '/invoices/list', <UnorderedListOutlined />),
+    ]),
+    getItem('Quản lý sản phẩm', 'products', <AppstoreOutlined />, [
+        getItem(<Link to="/products">Sản phẩm</Link>, '/products', <BoxPlotOutlined />),
+        getItem(<Link to="/service-packages">Gói dịch vụ</Link>, '/service-packages', <GiftOutlined />),
+    ]),
+    getItem('Quản lý Salon', 'salon', <ShopOutlined />, [
+        getItem(<Link to="/staff">Nhân viên</Link>, '/staff', <UserOutlined />),
+        getItem(<Link to="/customers">Khách hàng</Link>, '/customers', <TeamOutlined />),
+    ]),
+    getItem('Báo cáo', 'reports', <BarChartOutlined />, [
+        getItem(<Link to="/reports/revenue">Doanh thu</Link>, '/reports/revenue', <LineChartOutlined />),
+        getItem(<Link to="/reports/commissions">Hoa hồng</Link>, '/reports/commissions', <PieChartOutlined />),
+        getItem(<Link to="/reports/salary">Bảng lương</Link>, '/reports/salary', <DollarCircleOutlined />),
+    ]),
+    getItem('Thiết lập', 'settings', <SettingOutlined />, [
+        getItem(<Link to="/settings/commissions">Cài đặt hoa hồng</Link>, '/settings/commissions', <SlidersOutlined />),
+        getItem(<Link to="/settings/categories">Phân loại</Link>, '/settings/categories', <AppstoreAddOutlined />),
+        getItem(<Link to="/settings/adjustments">Các khoản điều chỉnh</Link>, '/settings/adjustments', <PartitionOutlined />),
+    ]),
+];
+
+const App = () => {
+    const location = useLocation();
+    const openKeys = ['/' + location.pathname.split('/')[1]];
+
+    return (
+        <Layout style={{ minHeight: '100vh' }}>
+            <Sider width={250}>
+                {/* --- BƯỚC 2: THAY THẾ DIV PLACEHOLDER BẰNG TÊN SALON --- */}
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '16px 0',
+                    cursor: 'pointer'
+                }}>
+                    <SmileOutlined style={{ fontSize: '28px', color: '#fff' }}/>
+                    <Title level={4} style={{ color: '#fff', margin: '0 0 0 10px', lineHeight: '1' }}>
+                        My Salon
+                    </Title>
+                </div>
+                {/* ----------------------------------------------------------- */}
+                <Menu
+                    theme="dark"
+                    mode="inline"
+                    selectedKeys={[location.pathname]}
+                    defaultOpenKeys={openKeys}
+                    items={menuItems}
+                />
+            </Sider>
+            <Layout>
+                <Header style={{ padding: '0 16px', background: '#fff' }}>
+                    <Title level={3} style={{ margin: '16px 0' }}>Quản lý Salon</Title>
+                </Header>
+                <Content style={{ margin: '16px' }}>
+                    <div style={{ padding: 24, minHeight: 360, background: '#fff', borderRadius: '8px' }}>
+                        <Routes>
+                             {/* ... (Giữ nguyên các Route của bạn) ... */}
+                            <Route path="/" element={<DashboardPage />} />
+                            <Route path="/invoices/create" element={<CreateInvoicePage />} />
+                            <Route path="/invoices/list" element={<InvoiceListPage />} />
+                            <Route path="/products" element={<ProductPage />} />
+                            <Route path="/service-packages" element={<ServicePackagePage />} />
+                            <Route path="/staff" element={<StaffPage />} />
+                            <Route path="/customers" element={<CustomerPage />} />
+                            <Route path="/reports/revenue" element={<RevenueReportPage />} />
+                            <Route path="/reports/commissions" element={<CommissionReportPage />} />
+                            <Route path="/reports/salary" element={<SalaryReportPage />} />
+                            <Route path="/settings/commissions" element={<CommissionSettingsPage />} />
+                            <Route path="/settings/categories" element={<CategorySettingsPage />} />
+                            <Route path="/settings/adjustments" element={<AdjustmentsPage />} />
+                        </Routes>
+                    </div>
+                </Content>
+                <Footer style={{ textAlign: 'center' }}>
+                    Salon Management ©{new Date().getFullYear()}
+                </Footer>
+            </Layout>
+        </Layout>
+    );
+};
+
+const AppWrapper = () => (
+    <Router>
+        <App />
+    </Router>
+);
+
+export default AppWrapper;
