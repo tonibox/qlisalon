@@ -1,0 +1,917 @@
+{
+  "products": [
+    {
+      "id": "SP1751377881258",
+      "name": "dầu gội",
+      "type": "product",
+      "selling_price": 500000,
+      "cost_price": 20000,
+      "stock": 9,
+      "category": "Dầu gội"
+    },
+    {
+      "id": "SP1751427959796",
+      "name": "dầu gội",
+      "type": "product",
+      "selling_price": 500000,
+      "cost_price": 200000,
+      "stock": 10
+    },
+    {
+      "id": "SP1751427992869",
+      "name": "sáp",
+      "type": "product",
+      "selling_price": 300000,
+      "cost_price": 150000,
+      "stock": 9
+    },
+    {
+      "id": "SP1751430694575",
+      "type": "service",
+      "name": "gội đầu dưỡng sinh",
+      "selling_price": 150000,
+      "stock": 999,
+      "category": "Gội đầu"
+    },
+    {
+      "id": "SP00001",
+      "name": "Nhuộm chân tóc",
+      "type": "service",
+      "category": "01. NHUỘM",
+      "selling_price": 300000,
+      "stock": 999999
+    },
+    {
+      "id": "SP00002",
+      "name": "Nhuộm màu thời trang",
+      "type": "service",
+      "category": "01. NHUỘM",
+      "selling_price": 700000,
+      "stock": 999999
+    },
+    {
+      "id": "SP00003",
+      "name": "Duỗi hơi nước",
+      "type": "service",
+      "category": "02. DUỖI",
+      "selling_price": 700000,
+      "stock": 999999
+    },
+    {
+      "id": "SP1751540602694",
+      "type": "service",
+      "name": "xả tóc nam",
+      "category": "cắt tóc nam",
+      "selling_price": 20000,
+      "commissionRate": 0
+    },
+    {
+      "id": "SP1751590166344",
+      "type": "service",
+      "name": "gội dầu thường",
+      "category": "Gội đầu",
+      "selling_price": 40000,
+      "commissionRate": 0
+    },
+    {
+      "id": "SP1751591382490",
+      "type": "service",
+      "name": "cắt tóc nam",
+      "category": "cắt tóc nam",
+      "selling_price": 50000,
+      "commissionRate": 0
+    }
+  ],
+  "customers": [
+    {
+      "id": "KH00001",
+      "name": "Nguyễn Văn Hải",
+      "phone": "0987654321",
+      "address": "Hà Nội"
+    },
+    {
+      "id": "KH00002",
+      "name": "Phạm Thu Hương",
+      "phone": "0123456789",
+      "address": "TP. Hồ Chí Minh"
+    },
+    {
+      "id": "KH1751596350111",
+      "name": "c li",
+      "phone": "098658214"
+    },
+    {
+      "id": "KH1751596766786",
+      "name": "a thái",
+      "phone": "0931256489"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "HD1751377895936",
+      "customerId": "KH00001",
+      "items": [
+        {
+          "id": "SP1751377881258",
+          "name": "dầu gội",
+          "quantity": 1,
+          "price": 500000
+        }
+      ],
+      "totalAmount": 500000,
+      "createdAt": "2025-07-01T13:51:35.936Z"
+    },
+    {
+      "id": "HD1751431436286",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP1751430708862",
+          "type": "service",
+          "name": "cắt tóc",
+          "selling_price": 50000,
+          "stock": 999,
+          "quantity": 1,
+          "consultantId": "NV1751424990538",
+          "serviceStaffId": "NV1751424990538",
+          "discount": 0,
+          "discountType": "amount",
+          "discountValue": 10000,
+          "calculatedDiscount": 10000
+        },
+        {
+          "id": "SP1751427992869",
+          "name": "sáp",
+          "type": "product",
+          "selling_price": 300000,
+          "cost_price": 150000,
+          "stock": 10,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 340000,
+      "totalDiscount": 10000,
+      "createdAt": "2025-07-02T04:43:56.286Z"
+    },
+    {
+      "id": "HD1751438124916",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00003",
+          "name": "Duỗi hơi nước",
+          "type": "service",
+          "category": "02. DUỖI",
+          "selling_price": 700000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 700000,
+      "totalDiscount": 0,
+      "createdAt": "2025-07-02T06:35:24.916Z"
+    },
+    {
+      "id": "HD1751439465723",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00001",
+          "name": "Nhuộm chân tóc",
+          "type": "service",
+          "category": "01. NHUỘM",
+          "selling_price": 300000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 300000,
+      "totalDiscount": 0,
+      "createdAt": "2025-07-02T06:57:45.723Z"
+    },
+    {
+      "id": "HD1751439479241",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00001",
+          "name": "Nhuộm chân tóc",
+          "type": "service",
+          "category": "01. NHUỘM",
+          "selling_price": 300000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 300000,
+      "totalDiscount": 0,
+      "createdAt": "2025-07-02T06:57:59.241Z"
+    },
+    {
+      "id": "HD1751439729285",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00003",
+          "name": "Duỗi hơi nước",
+          "type": "service",
+          "category": "02. DUỖI",
+          "selling_price": 700000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 700000,
+      "totalDiscount": 0,
+      "createdAt": "2025-07-02T07:02:09.285Z"
+    },
+    {
+      "id": "HD1751439748047",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00003",
+          "name": "Duỗi hơi nước",
+          "type": "service",
+          "category": "02. DUỖI",
+          "selling_price": 700000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 700000,
+      "totalDiscount": 0,
+      "createdAt": "2025-07-02T07:02:28.047Z"
+    },
+    {
+      "id": "HD1751439885171",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00003",
+          "name": "Duỗi hơi nước",
+          "type": "service",
+          "category": "02. DUỖI",
+          "selling_price": 700000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 700000,
+      "totalDiscount": 0,
+      "createdAt": "2025-07-02T07:04:45.171Z"
+    },
+    {
+      "id": "HD1751509589554",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00003",
+          "name": "Duỗi hơi nước",
+          "type": "service",
+          "category": "02. DUỖI",
+          "selling_price": 700000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        },
+        {
+          "id": "SP00001",
+          "name": "Nhuộm chân tóc",
+          "type": "service",
+          "category": "01. NHUỘM",
+          "selling_price": 300000,
+          "stock": 999999,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 1000000,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-03T02:26:29.554Z"
+    },
+    {
+      "id": "HD1751514320542",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP00003",
+          "name": "Duỗi hơi nước",
+          "type": "service",
+          "category": "02. DUỖI",
+          "selling_price": 700000,
+          "stock": 999999,
+          "commissionRate": 10,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": "NV1751424990538",
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 700000,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-03T03:45:20.542Z"
+    },
+    {
+      "id": "HD1751532398381",
+      "items": [
+        {
+          "id": "SP1751430708862",
+          "type": "service",
+          "name": "cắt tóc",
+          "selling_price": 50000,
+          "stock": 999,
+          "commissionRate": 10,
+          "quantity": 1,
+          "consultantId": null,
+          "serviceStaffId": null,
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 50000,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-03T08:46:38.381Z"
+    },
+    {
+      "id": "HD1751534246180",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP1751430708862",
+          "type": "service",
+          "name": "cắt tóc nam",
+          "selling_price": 50000,
+          "stock": 999,
+          "commissionRate": 10,
+          "category": "cắt tóc nam",
+          "quantity": 1,
+          "consultantIds": [],
+          "serviceStaffIds": [
+            "NV1751424990538"
+          ],
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 50000,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-03T09:17:26.180Z"
+    },
+    {
+      "id": "HD1751540058866",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP1751430708862",
+          "type": "service",
+          "name": "cắt tóc nam",
+          "selling_price": 50000,
+          "stock": 999,
+          "commissionRate": 10,
+          "category": "cắt tóc nam",
+          "quantity": 1,
+          "consultantIds": [],
+          "serviceStaffIds": [
+            "NV1751424990538"
+          ],
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 50000,
+      "totalDiscount": 0,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-03T10:54:18.866Z"
+    },
+    {
+      "id": "HD1751541138492",
+      "customerId": null,
+      "items": [
+        {
+          "id": "SP1751540602694",
+          "type": "service",
+          "name": "xả tóc nam",
+          "category": "cắt tóc nam",
+          "selling_price": 20000,
+          "commissionRate": 0,
+          "quantity": 1,
+          "consultantIds": [],
+          "serviceStaffIds": [
+            "NV1751424990538"
+          ],
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        },
+        {
+          "id": "SP1751430708862",
+          "type": "service",
+          "name": "cắt tóc nam",
+          "selling_price": 50000,
+          "stock": 999,
+          "commissionRate": 10,
+          "category": "cắt tóc nam",
+          "quantity": 1,
+          "consultantIds": [],
+          "serviceStaffIds": [
+            "NV1751424990538"
+          ],
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 70000,
+      "totalDiscount": 0,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-03T11:12:18.492Z"
+    },
+    {
+      "id": "HD1751547683604",
+      "customerId": "KH00001",
+      "items": [
+        {
+          "id": "GOI1751545888382",
+          "name": "thẻ cắt tóc 10 tặng 2",
+          "serviceId": "SP1751540602694",
+          "totalSessions": 10,
+          "price": 500000,
+          "selling_price": 500000,
+          "quantity": 1,
+          "consultantIds": [
+            "NV1751424990538"
+          ],
+          "serviceStaffIds": [],
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0
+        }
+      ],
+      "totalAmount": 500000,
+      "totalDiscount": 0,
+      "amountPaid": 500000,
+      "debt": 0,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-03T13:01:23.604Z"
+    },
+    {
+      "id": "HD1751591506450",
+      "customerId": "KH00001",
+      "items": [
+        {
+          "id": "SP1751591382490",
+          "type": "service",
+          "name": "cắt tóc nam",
+          "category": "cắt tóc nam",
+          "selling_price": 0,
+          "commissionRate": 0,
+          "quantity": 1,
+          "consultantIds": [],
+          "serviceStaffIds": [
+            "NV1751424990538"
+          ],
+          "discountType": "amount",
+          "discountValue": 0,
+          "calculatedDiscount": 0,
+          "isPaidByPackage": true,
+          "usedPackageId": "CUS_PKG_1751547683604"
+        }
+      ],
+      "totalAmount": 0,
+      "totalDiscount": 0,
+      "amountPaid": 0,
+      "debt": 0,
+      "status": "Hoàn thành",
+      "createdAt": "2025-07-04T01:11:46.450Z"
+    }
+  ],
+  "staff": [
+    {
+      "id": "NV00001",
+      "name": "Trần Thị Bích",
+      "phone": "0312698745",
+      "status": "Đang làm việc",
+      "salary": 10000000
+    },
+    {
+      "id": "NV00002",
+      "name": "Lê Văn An",
+      "phone": "0985422364",
+      "status": "Đang làm việc",
+      "salary": 8000000
+    },
+    {
+      "id": "NV1751424990538",
+      "name": "duy",
+      "phone": "0364125369",
+      "status": "Đang làm việc",
+      "salary": 8000000
+    },
+    {
+      "id": "NV1751596614762",
+      "name": "thái",
+      "phone": "0364523169",
+      "salary": 3000000,
+      "status": "Đang làm việc"
+    },
+    {
+      "id": "NV1751600786405",
+      "name": "toàn",
+      "phone": "0362346852",
+      "salary": 0,
+      "status": "Đang làm việc"
+    }
+  ],
+  "servicePackages": [
+    {
+      "id": "GOI001",
+      "name": "Gói 10 lần gội đầu dưỡng sinh",
+      "type": "service",
+      "serviceId": "SP1751430694575",
+      "totalSessions": 10,
+      "price": 800000
+    },
+    {
+      "id": "GOI1751430738611",
+      "name": "thẻ cắt tóc 5 tặng 1",
+      "serviceId": "SP1751591382490",
+      "totalSessions": 5,
+      "price": 250000
+    },
+    {
+      "id": "GOI1751545888382",
+      "name": "thẻ cắt tóc 10 tặng 2",
+      "serviceId": "SP1751591382490",
+      "totalSessions": 10,
+      "price": 500000
+    },
+    {
+      "id": "GOI1751590202933",
+      "name": "gội dầu thường 10 buổi tặng 2",
+      "serviceId": "SP1751590166344",
+      "totalSessions": 10,
+      "price": 400000
+    }
+  ],
+  "payments": [
+    {
+      "id": "TTHD1751509589554",
+      "invoiceId": "HD1751509589554",
+      "amount": 1000000,
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2025-07-03T02:26:29.554Z",
+      "createdBy": "Thu ngân",
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "TTHD1751514320542",
+      "invoiceId": "HD1751514320542",
+      "amount": 700000,
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2025-07-03T03:45:20.542Z",
+      "createdBy": "Thu ngân",
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "TTHD1751532398382",
+      "invoiceId": "HD1751532398381",
+      "amount": 50000,
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2025-07-03T08:46:38.381Z",
+      "createdBy": "Thu ngân",
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "TTHD1751534246180",
+      "invoiceId": "HD1751534246180",
+      "amount": 50000,
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2025-07-03T09:17:26.180Z",
+      "createdBy": "Thu ngân",
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "TTHD1751540058866",
+      "invoiceId": "HD1751540058866",
+      "amount": 50000,
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2025-07-03T10:54:18.866Z",
+      "createdBy": "Thu ngân",
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "TTHD1751541138492",
+      "invoiceId": "HD1751541138492",
+      "amount": 70000,
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2025-07-03T11:12:18.492Z",
+      "createdBy": "Thu ngân",
+      "status": "Đã thanh toán"
+    },
+    {
+      "id": "TTHD1751547683604",
+      "invoiceId": "HD1751547683604",
+      "amount": 500000,
+      "paymentMethod": "Tiền mặt",
+      "createdAt": "2025-07-03T13:01:23.604Z",
+      "createdBy": "Thu ngân",
+      "status": "Đã thanh toán"
+    }
+  ],
+  "commissions": [
+    {
+      "id": "HH1751540058866NV1751424990538",
+      "invoiceId": "HD1751540058866",
+      "staffId": "NV1751424990538",
+      "serviceId": "SP1751430708862",
+      "commissionAmount": 12500,
+      "createdAt": "2025-07-03T10:54:18.866Z"
+    },
+    {
+      "id": "HH1751541138492NV1751424990538",
+      "invoiceId": "HD1751541138492",
+      "staffId": "NV1751424990538",
+      "serviceId": "SP1751540602694",
+      "commissionAmount": 5000,
+      "createdAt": "2025-07-03T11:12:18.492Z"
+    },
+    {
+      "id": "HH1751541138492NV1751424990538",
+      "invoiceId": "HD1751541138492",
+      "staffId": "NV1751424990538",
+      "serviceId": "SP1751430708862",
+      "commissionAmount": 12500,
+      "createdAt": "2025-07-03T11:12:18.492Z"
+    }
+  ],
+  "commissionRules": [
+    {
+      "id": "RULE1751540016356",
+      "staffId": "NV00001",
+      "type": "category",
+      "targetId": "CAT03",
+      "rate": 10
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP00001",
+      "type": "item",
+      "rate": 14
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP1751430708862",
+      "type": "item",
+      "rate": 25
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP1751427992869",
+      "type": "item",
+      "rate": 10
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP00002",
+      "type": "item",
+      "rate": 14
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP00003",
+      "type": "item",
+      "rate": 14
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP1751540602694",
+      "type": "item",
+      "rate": 25
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP1751427959796",
+      "type": "item",
+      "rate": 10
+    },
+    {
+      "staffId": "NV1751424990538",
+      "targetId": "SP1751377881258",
+      "type": "item",
+      "rate": 10
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP1751591382490",
+      "type": "item",
+      "rate": 25
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP1751540602694",
+      "type": "item",
+      "rate": 25
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP00003",
+      "type": "item",
+      "rate": 14
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP00002",
+      "type": "item",
+      "rate": 14
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP00001",
+      "type": "item",
+      "rate": 14
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP1751430694575",
+      "type": "item",
+      "rate": 20
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP1751427992869",
+      "type": "item",
+      "rate": 10
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP1751590166344",
+      "type": "item",
+      "rate": 15
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP1751377881258",
+      "type": "item",
+      "rate": 10
+    },
+    {
+      "staffId": "NV1751596614762",
+      "targetId": "SP1751427959796",
+      "type": "item",
+      "rate": 10
+    },
+    {
+      "staffId": "NV1751600786405",
+      "targetId": "SP1751591382490",
+      "type": "item",
+      "rate": 25,
+      "id": "RULE1751603957170_olfix48np"
+    },
+    {
+      "staffId": "NV1751600786405",
+      "targetId": "SP1751540602694",
+      "type": "item",
+      "rate": 25,
+      "id": "RULE1751603957170_w8vq32juh"
+    },
+    {
+      "staffId": "NV1751600786405",
+      "targetId": "SP1751590166344",
+      "type": "item",
+      "rate": 20,
+      "id": "RULE1751603957170_ougtnx2ul"
+    },
+    {
+      "staffId": "NV1751600786405",
+      "targetId": "SP00003",
+      "type": "item",
+      "rate": 14,
+      "id": "RULE1751603957170_5ivhsgl2l"
+    },
+    {
+      "staffId": "NV1751600786405",
+      "targetId": "SP00002",
+      "type": "item",
+      "rate": 0,
+      "id": "RULE1751603957170_i592w88yp"
+    }
+  ],
+  "categories": [
+    {
+      "id": "CAT01",
+      "name": "01. NHUỘM",
+      "type": "service"
+    },
+    {
+      "id": "CAT02",
+      "name": "02. DUỖI",
+      "type": "service"
+    },
+    {
+      "id": "CAT03",
+      "name": "Dầu gội",
+      "type": "product"
+    },
+    {
+      "id": "CAT1751533847006",
+      "name": "Dầu xả",
+      "type": "product"
+    },
+    {
+      "id": "CAT1751533911703",
+      "name": "Uốn tóc",
+      "type": "service"
+    },
+    {
+      "id": "CAT1751534144012",
+      "name": "cắt tóc nam",
+      "type": "service"
+    },
+    {
+      "id": "CAT1751534149786",
+      "name": "cắt tóc nữ",
+      "type": "service"
+    },
+    {
+      "id": "CAT1751534177465",
+      "name": "Gội đầu",
+      "type": "service"
+    }
+  ],
+  "customerPackages": [
+    {
+      "id": "CUS_PKG_1751547683604",
+      "customerId": "KH00001",
+      "packageId": "GOI1751545888382",
+      "sessionsRemaining": 9,
+      "purchasedAt": "2025-07-03T13:01:23.604Z"
+    }
+  ],
+  "salaryAdjustments": [
+    {
+      "id": "ADJ001",
+      "staffId": "NV00001",
+      "type": "bonus",
+      "amount": 500000,
+      "reason": "Thưởng chuyên cần tháng 6",
+      "date": "2025-07-04"
+    },
+    {
+      "id": "ADJ1751596426292",
+      "staffId": "NV1751424990538",
+      "type": "bonus",
+      "amount": 50000,
+      "reason": "trực nhật tốt",
+      "date": "2025-07-04"
+    }
+  ]
+}
